@@ -87,21 +87,19 @@ log = pd.DataFrame(columns=log_cols)
 # Loop through all the datapoint combinations/segments.
 for name,i in zip(combinations, X_groups):
     
-      #Classifier 
-#    model = CatBoostClassifier(learning_rate=0.9,
-#                           random_strength=0.13,
-#                           depth=3,#3
-#                           colsample_bylevel= 0.4,
-#                           iterations=30,#500#59
-#                           logging_level='Silent',
-#                           eval_metric='AUC',
-#                           border_count=10,
-#                           l2_leaf_reg=1,#10
-#                           fold_len_multiplier = 31.1)
+      #Classifier
      
-    model = CatBoostClassifier(
-                           iterations=60,#500#59
-                           logging_level='Silent')
+    model = CatBoostClassifier(learning_rate=0.39,
+                                depth=3,#4#3#12
+                                iterations=60,#500#59
+                                logging_level='Silent',
+                                eval_metric='AUC',
+                                boosting_type='Ordered',
+                                border_count=7,#4,7,9
+                                random_seed=43,
+                                thread_count=4,
+                                l2_leaf_reg=7,#1#10#3,15
+                                fold_len_multiplier=1.6)
 
     # Data
     df = i
@@ -437,21 +435,17 @@ log = pd.DataFrame(columns=log_cols)
 for name,i in zip(combinations, X_groups):
     
       #Classifier 
-#    model = CatBoostClassifier(learning_rate=0.9,
-#                           random_strength=0.13,
-#                           depth=3,#3
-#                           colsample_bylevel= 0.4,
-#                           iterations=30,#500#59
-#                           logging_level='Silent',
-#                           eval_metric='AUC',
-#                           border_count=10,
-#                           l2_leaf_reg=1,#10
-#                           fold_len_multiplier = 31.1)
-     
-    model = CatBoostClassifier(
-                                iterations=60,#500#59
-                                logging_level='Silent'
-                                )
+    model = CatBoostClassifier(learning_rate=0.9,
+                           random_strength=0.13,
+                           depth=3,#3
+                           colsample_bylevel= 0.4,
+                           iterations=30,#500#59
+                           logging_level='Silent',
+                           eval_metric='AUC',
+                           border_count=10,
+                           l2_leaf_reg=1,#10
+                           fold_len_multiplier = 31.1)
+   
 
     # Data
     df = i
