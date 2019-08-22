@@ -15,3 +15,8 @@ scipy
 skopt
 tqdm
 hyperopt
+
+# Notes
+
+The scripts require the path to the data set containing PASI trajectories.
+A 'mods/' folder must be created to save trained models.
