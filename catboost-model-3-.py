@@ -4,7 +4,15 @@
 Created on Thu Aug  8 21:53:53 2019
 
 @author: brianmusonza
+
+
+
+This script will carry out pre-processing,
+train, save and test catboost based model on the 
+data set of 162 patients (merged).
+Bar charts showing model performances will be printed.
 """
+
 
 
 import time
