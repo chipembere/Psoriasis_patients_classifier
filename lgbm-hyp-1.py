@@ -1,3 +1,8 @@
+'''
+Perfom Bayesian hyper-parameter optimisation for 
+lgbmClassifier.
+'''
+
 from sklearn.model_selection import GridSearchCV
 from lightgbm import LGBMClassifier
 from hyperparameter_hunter import Environment, CVExperiment
