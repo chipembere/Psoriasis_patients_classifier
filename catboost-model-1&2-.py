@@ -4,6 +4,13 @@
 Created on Thu Aug  8 21:51:33 2019
 
 @author: brianmusonza
+
+This script will carry out pre-processing,
+train, save and test catboost based model on the 
+data set with 96 patients.
+The second part of this script will test trained models 
+on the data set with 962 patients.
+Bar charts showing model performances will be printed.
 """
 
 import time
@@ -378,53 +385,12 @@ for i in ax.patches:
             str(round((i.get_height()), 1)), fontsize=13, color='black', rotation=0)
 
 
-
-
 plt.show()
 
+#save figure
 #plt.savefig('/Users/brianmusonza/Documents/venv/Projects/Time-Series-Predictor/fname3.png')
 
 #print("Model Runtime: %0.2f Minutes"%((time.time() - modelstart)/60))
 print("Notebook Runtime: %0.2f Minutes"%((time.time() - notebookstart)/60))
 
 
-
-
-
-
-#Classifier 
-#    model = CatBoostClassifier(learning_rate=0.9,
-#                           random_strength=0.13,
-#                           depth=3,#3
-#                           colsample_bylevel= 0.4,
-#                           iterations=30,#500#59
-#                           logging_level='Silent',
-#                           eval_metric='AUC',
-#                           border_count=10,
-#                           l2_leaf_reg=1,#10
-#                           fold_len_multiplier = 31.1)
-     
-#    model = CatBoostClassifier(learning_rate=0.8,
-#                           random_strength=0.13,
-#                           depth=5,#3
-#                           boosting_type='Ordered',
-#                           colsample_bylevel= 0.4,
-#                           iterations=30,#500#59
-#                           logging_level='Silent',
-#                           eval_metric='AUC',
-#                           border_count=10,
-#                           l2_leaf_reg=1,#10
-#                           fold_len_multiplier = 31.1)
-
-
-#    model = CatBoostClassifier(learning_rate=0.9,
-#                                depth=4,#3
-#                                random_strength=0.59,
-#                                boosting_type='Ordered',
-#                                iterations=30,#500#59
-#                                logging_level='Silent',
-#                                eval_metric='AUC',
-#                                border_count=4,
-#                                thread_count=-1,
-#                                l2_leaf_reg=4,#10
-#                                fold_len_multiplier=1.1)#collected
