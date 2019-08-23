@@ -19,4 +19,4 @@ hyperopt
 # Notes
 
 The scripts require the path to the data set containing PASI trajectories.
-A 'mods/' folder must be created to save trained models.
+A 'mods/' folder must be created to save trained models. The number of cross-validation iterations can be adjusted.
