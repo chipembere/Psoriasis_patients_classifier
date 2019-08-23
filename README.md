@@ -1,6 +1,7 @@
 # Psoriasis_patients_classifier
 
 Code used in the "__A gradient boosting decision tree forecaster for predicting Psoriasis PASI trajectories__ " research project. The provided scripts help load data, pre-processing, training, testing and plots results.
+This also includes scripts for Bayesian hyper-parameter search and a script to plot PASI trajectories.
 
 # Dependancies
 numpy
